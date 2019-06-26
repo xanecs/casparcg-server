@@ -152,6 +152,10 @@ casparcg_add_runtime_dependency("${OPENAL_BIN_PATH}/OpenAL32.dll")
 set(LIBERATION_FONTS_BIN_PATH "${PROJECT_SOURCE_DIR}/shell/liberation-fonts")
 casparcg_add_runtime_dependency("${LIBERATION_FONTS_BIN_PATH}/LiberationMono-Regular.ttf")
 
+# LIBJPEG
+set(LIBJPEGTURBO_INCLUDE_PATH "${NUGET_PACKAGES_FOLDER}/Libjpeg-Turbo.1.5.15/build/native/include")
+link_directories("${NUGET_PACKAGES_FOLDER}/Libjpeg-Turbo.1.5.15/lib/native/v140/windesktop/msvcstl/x64/Release/mt")
+
 # CEF
 if (ENABLE_HTML)
 	set(CEF_INCLUDE_PATH "${NUGET_PACKAGES_FOLDER}/cef.sdk.3.3239.1723/CEF")
